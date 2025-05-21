@@ -14,6 +14,14 @@ from telegram.ext import (
     CallbackQueryHandler
 )
 from functools import partial
+from keep_alive import keep_alive
+
+keep_alive()
+
+# Resto de tu código para iniciar el bot
+updater.start_polling()
+updater.idle()
+
 
 # Carga .env y configura logging
 load_dotenv()
